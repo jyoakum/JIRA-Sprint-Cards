@@ -9,9 +9,9 @@ You'll need to be using the following:
 
 ## Included
 Here's what you got:
-* jiraReport.py
-** Note: If running from the terminal you'll have to click on the input box to set the focus.
-* jiraReport.app
+* [jiraReport.py](https://github.com/jyoakum/JIRA-Sprint-Cards/blob/master/jiraReport.py)
+  * Note: If running from the terminal you'll have to click on the input box to set the focus.
+* [jiraReport.app](https://github.com/jyoakum/JIRA-Sprint-Cards/tree/master/jiraReport.app)
 
 ## Future Improvements
 Once I figure out how I want to share the details within the context of a github repo, I'll be adding information on how to make a [py2app](http://pythonhosted.org/py2app/) Mac application from the Python script.
