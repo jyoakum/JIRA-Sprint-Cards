@@ -6,6 +6,7 @@ You'll need the following to run the Python Script:
 * Access to [Atlassian JIRA](https://www.atlassian.com/software/jira)
 * [Python 2.7](http://www.python.org/download/releases/2.7/)
 * [easygui](http://easygui.sourceforge.net/)
+* [py2app](http://pythonhosted.org/py2app/install.html) to build the Mac app.
 
 To run the Mac application:
 * Access to [Atlassian JIRA](https://www.atlassian.com/software/jira)
