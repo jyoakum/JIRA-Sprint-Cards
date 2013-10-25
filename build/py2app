@@ -1,0 +1,8 @@
+#!/bin/bash
+
+py2applet --make-setup ../src/jiraReport.py
+python setup.py py2app
+rm setup.py
+rm -rf build
+cd dist
+zip jiraReport.app.zip jiraReport.app

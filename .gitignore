@@ -1,3 +1,4 @@
 .idea*
 jira_report.html
 *.pyc
+*/dist/*
