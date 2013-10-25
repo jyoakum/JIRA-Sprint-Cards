@@ -3,7 +3,11 @@
 #
 # author: Jerry Yoakum
 
-import urllib2, json, base64, easygui, os
+import base64
+import easygui
+import json
+import os
+import urllib2
 
 
 def removeFirstLink(description):
