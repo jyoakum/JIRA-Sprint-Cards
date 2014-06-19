@@ -16,7 +16,4 @@ To run the Mac application:
 Here's what you get:
 * [jiraReport.py](https://github.com/jyoakum/JIRA-Sprint-Cards/blob/master/src/jiraReport.py)
   * Note: If running from the terminal you'll have to click on the input box to set the focus.
-* [jiraReport.app.zip](https://github.com/jyoakum/JIRA-Sprint-Cards/releases/download/v1.0-alpha/jiraReport.app.zip)
-
-## Future Improvements
-Once I decide how I want to share the details within the context of a github repo, I'll be adding information on how to make a [py2app](http://pythonhosted.org/py2app/) Mac application from the Python script.
+* [jiraReport.app.zip](https://github.com/jyoakum/JIRA-Sprint-Cards/releases/download/v1.0/jiraReport.app.zip)
