@@ -9,13 +9,9 @@ When making a Scrum board skip making post-its for the stories and use JIRA Spri
 
 ## Usage
 ![JIRA Hostname](https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/JIRA%20Hostname.png)
-
 ![Username](https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/Username.png)
-
 ![Password](https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/Password.png)
-
 ![JIRA Agile Board](https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/JIRA%20Agile%20Board.png)
-
 ![JIRA Issues](https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/JIRA%20Issues.png)
 
 Resulting in the following [output](http://jyoakum.github.io/JIRA-Sprint-Cards/src/jira_report.html).
