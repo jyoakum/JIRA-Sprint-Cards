@@ -1,8 +1,19 @@
 # JIRA Sprint Cards
 When making a Scrum board skip making post-its for the stories and use JIRA Sprint Cards to specify a list of JIRA issues to generate a print ready webpage. Simply cut out the issues and tape to your Scrum board.
 
+## Usage
+![JIRA Hostname](https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/JIRA%20Hostname.png)
 
-![Example Scrum Board with JIRA Sprint Cards](https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/Scrum%20Board.jpeg)Example Scrum Board with JIRA Sprint Cards
+![Username](https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/Username.png)
+
+![Password](https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/Password.png)
+
+![JIRA Issues](https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/JIRA%20Issues.png)
+
+Resulting in the following [output](http://jyoakum.github.io/JIRA-Sprint-Cards/src/jira_report.html).
+Which with some cutting in taping you can make a Scrum board with helpful descriptions.
+
+![Example Scrum Board with JIRA Sprint Cards](https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/Scrum%20Board.jpeg)
 
 ## Requirements
 You'll need the following to run the Python Script:
