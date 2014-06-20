@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Jira-sprint-cards : JIRA-Sprint-Cards can be used to create a Scrum Board ready webpage (minus printing and cutting) of your JIRA sprint stories." />
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Jira-sprint-cards by jyoakum</title>
+    <title>Jira-sprint-cards</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Jira-sprint-cards</h1>
-        <h2>JIRA-Sprint-Cards can be used to create a Scrum Board ready webpage (minus printing and cutting) of your JIRA sprint stories.</h2>
-        <a href="https://github.com/jyoakum/JIRA-Sprint-Cards" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
-<a name="welcome-to-jira-sprint-cards" class="anchor" href="#welcome-to-jira-sprint-cards"><span class="octicon octicon-link"></span></a>Welcome to <a href="https://github.com/jyoakum/JIRA-Sprint-Cards">JIRA-Sprint-Cards</a>
-</h3>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jyoakum/JIRA-Sprint-Cards">View on GitHub</a>
+
+          <h1 id="project_title">Jira-sprint-cards</h1>
+          <h2 id="project_tagline">JIRA-Sprint-Cards can be used to create a Scrum Board ready webpage (minus printing and cutting) of your JIRA sprint stories.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jyoakum/JIRA-Sprint-Cards/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jyoakum/JIRA-Sprint-Cards/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="jira-sprint-cards" class="anchor" href="#jira-sprint-cards"><span class="octicon octicon-link"></span></a>JIRA Sprint Cards</h1>
 
 <p>When making a Scrum board skip making post-its for the stories and use JIRA Sprint Cards to specify a list of JIRA issues to generate a print ready webpage. Simply cut out the issues and tape to your Scrum board.</p>
 
+<h2>
+<a name="scrum-board" class="anchor" href="#scrum-board"><span class="octicon octicon-link"></span></a>Scrum Board</h2>
+
 <h3>
-<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h3>
+<a name="before" class="anchor" href="#before"><span class="octicon octicon-link"></span></a>Before</h3>
+
+<p><img src="https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/Scrum%20Board%20-%20before.jpeg" alt="Scrum Board - Before"></p>
+
+<h3>
+<a name="after" class="anchor" href="#after"><span class="octicon octicon-link"></span></a>After</h3>
+
+<p><img src="https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/Scrum%20Board.jpeg" alt="Scrum Board - After"></p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p><img src="https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/JIRA%20Hostname.png" alt="JIRA Hostname"><img src="https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/Username.png" alt="Username"><img src="https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/Password.png" alt="Password"><img src="https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/JIRA%20Agile%20Board.png" alt="JIRA Agile Board"><img src="https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/JIRA%20Issues.png" alt="JIRA Issues"></p>
+
+<p>Resulting in the following <a href="http://jyoakum.github.io/JIRA-Sprint-Cards/src/jira_report.html">output</a>.
+Which with some cutting in taping you can make a <a href="https://raw.githubusercontent.com/jyoakum/JIRA-Sprint-Cards/gh-pages/images/Scrum%20Board.jpeg">Scrum board with helpful descriptions</a>.</p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
 <p>You'll need the following to run the Python Script:</p>
 
@@ -52,8 +75,8 @@
 <li>Access to <a href="https://www.atlassian.com/software/jira">Atlassian JIRA</a>
 </li>
 <li>OS X v10.8</li>
-</ul><h3>
-<a name="included" class="anchor" href="#included"><span class="octicon octicon-link"></span></a>Included</h3>
+</ul><h2>
+<a name="included" class="anchor" href="#included"><span class="octicon octicon-link"></span></a>Included</h2>
 
 <p>Here's what you get:</p>
 
@@ -67,25 +90,18 @@
 </li>
 <li><a href="https://github.com/jyoakum/JIRA-Sprint-Cards/releases/download/v1.0/jiraReport.app.zip">jiraReport.app.zip</a></li>
 </ul>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/jyoakum/JIRA-Sprint-Cards/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/jyoakum/JIRA-Sprint-Cards/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/jyoakum/JIRA-Sprint-Cards"></a> is maintained by <a href="https://github.com/jyoakum">jyoakum</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
-  
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Jira-sprint-cards maintained by <a href="https://github.com/jyoakum">jyoakum</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
