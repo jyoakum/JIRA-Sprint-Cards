@@ -25,11 +25,16 @@ def writeIssue(auth_header, uri, fileHandler):
     fileHandler.write('<div style="page-break-inside:avoid;max-height:400px;overflow:hidden">')
     fileHandler.write('<h1>' + result['key'] + ' - ' + result['fields']['summary'] + '</h1>')
     description = result['fields']['description']
-    description = description.replace('\n', '<br>')
+    if description is not None:
+        description = description.replace('\n', '<br>')
 
-    for i in range(description.count('[')):
-        description = removeFirstLink(description)
-    description = description.replace(u'—', '-')
+        for i in range(description.count('[')):
+            description = removeFirstLink(description)
+        description = description.replace(u'—', '-')
+        description = description.replace(u'’', "'")
+        description = description.replace(u'‘', "'")
+        description = description.replace(u'“', '"')
+        description = description.replace(u'"', '"')
 
     storyPoints = result['fields']['customfield_10022']
     if storyPoints is not None:
@@ -40,6 +45,7 @@ def writeIssue(auth_header, uri, fileHandler):
         fileHandler.write('<br>')
     fileHandler.write('</div><hr>')
 
+
 def inputbox(message, title, default=None, private=False):
     if private:
         response = easygui.passwordbox(msg=message, title=title, default=default)
@@ -49,6 +55,7 @@ def inputbox(message, title, default=None, private=False):
         exit(0)
     else:
         return response
+
 
 def main():
     jiraHostname = inputbox("Please enter the hostname for your JIRA service. "
