@@ -18,32 +18,35 @@ def removeFirstLink(description):
     pipe = link.find('|')
     return description.replace(link, link[1:pipe])
 
-
-def writeIssue(auth_header, uri, fileHandler):
+def getIssue(auth_header, uri):
     req = urllib2.Request(uri, headers=auth_header)
-    result = json.load(urllib2.urlopen(req))
-    fileHandler.write('<div style="page-break-inside:avoid;max-height:400px;overflow:hidden">')
-    fileHandler.write('<h1>' + result['key'] + ' - ' + result['fields']['summary'] + '</h1>')
-    description = result['fields']['description']
-    if description is not None:
-        description = description.replace('\n', '<br>')
+    return json.load(urllib2.urlopen(req))
 
-        for i in range(description.count('[')):
-            description = removeFirstLink(description)
-        description = description.replace(u'—', '-')
-        description = description.replace(u'’', "'")
-        description = description.replace(u'‘', "'")
-        description = description.replace(u'“', '"')
-        description = description.replace(u'"', '"')
+def summarizeIssue(issue):
+    issueSummary = '<div style="page-break-inside:avoid;max-height:400px;overflow:hidden">'
+    issueSummary += '<h1>' + issue['key'] + ' - ' + issue['fields']['summary'] + '</h1>'
+    description = issue['fields']['description']
+    if description is None:
+        description = ''
+    description = description.replace('\n', '<br>')
 
-    storyPoints = result['fields']['customfield_10022']
+    for i in range(description.count('[')):
+        description = removeFirstLink(description)
+    description = description.replace(u'—', '-')
+    description = description.replace(u'’', "'")
+    description = description.replace(u'‘', "'")
+    description = description.replace(u'“', '"')
+    description = description.replace(u'"', '"')
+
+    storyPoints = issue['fields']['customfield_10022']
     if storyPoints is not None:
         storyPoints = float(storyPoints)
-    fileHandler.write('<p style="width: 550px;"><b>SP:</b> ' + str(storyPoints)
-                      + ' <b>Description</b>: ' + description + '</p>')
+    issueSummary += '<p style="width: 550px;"><b>SP:</b> ' + str(storyPoints)\
+                    + ' <b>Description</b>: ' + description + '</p>'
     for i in range(20):
-        fileHandler.write('<br>')
-    fileHandler.write('</div><hr>')
+        issueSummary += ('<br>')
+    issueSummary += '</div><hr>'
+    return issueSummary
 
 
 def inputbox(message, title, default=None, private=False):
@@ -73,7 +76,7 @@ def main():
 
     for issue in issues:
         uri = 'https://' + jiraHostname + '/rest/api/latest/issue/' + issue.strip()
-        writeIssue(auth_header, uri, out)
+        out.write(summarizeIssue(getIssue(auth_header, uri)))
 
     out.write('</body></html>')
     out.close()
