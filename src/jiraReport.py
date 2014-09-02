@@ -23,8 +23,8 @@ def getIssue(auth_header, uri):
     return json.load(urllib2.urlopen(req))
 
 def summarizeIssue(issue):
-    issueSummary = '<div style="page-break-inside:avoid;max-height:400px;overflow:hidden">'
-    issueSummary += '<h1>' + issue['key'] + ' - ' + issue['fields']['summary'] + '</h1>'
+    issueSummary = '<div style="page-break-inside:avoid;max-height:400px;overflow:hidden"><h1>{key} - {summary}</h1>'\
+        .format(key = issue['key'], summary = issue['fields']['summary'])
     description = issue['fields']['description']
     if description is None:
         description = ''
@@ -42,7 +42,7 @@ def summarizeIssue(issue):
     if storyPoints is not None:
         storyPoints = float(storyPoints)
     issueSummary += '<p style="width: 550px;"><b>SP:</b> ' + str(storyPoints)\
-                    + ' <b>Description</b>: ' + description + '</p>'
+                    + ' <b>Description</b>: {description}</p>'.format(description=description)
     for i in range(20):
         issueSummary += ('<br>')
     issueSummary += '</div><hr>'
